@@ -20,9 +20,7 @@ test.each(fileExt)('testing different file options', (extension) => {
   const actual1 = genDiff(fileBefore, fileAfter, 'stylish');
   expect(actual1).toEqual(resultStylish);
   const actual2 = genDiff(fileBefore, fileAfter, 'plain');
-  console.log('str1', actual2.split());
-  console.log('str2', resultPlain.split());
   expect(actual2).toEqual(resultPlain);
-  const actual4 = genDiff(fileBefore, fileAfter);
-  expect(actual4).toEqual(resultStylish);
+  const actual3 = genDiff(fileBefore, fileAfter);
+  expect(actual3).toEqual(resultStylish);
 });
